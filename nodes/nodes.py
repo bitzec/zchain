@@ -5,7 +5,7 @@ import psycopg2, requests, re, datetime, time, json, sys
 regex   = re.compile('(.*) receive version message: (.*): version ([^,]*), blocks=([^,]*), us=([^,]*), peer=([^,]*), peeraddr=(.*)')
 regex2  = re.compile('(.*) connect\(\) to ([^\s].*) failed after select\(\): Connection refused \(111\)')
 
-log  = open('/root/.zcash/debug.log')
+log  = open('/root/.bitzec/debug.log')
 conn = psycopg2.connect('dbname=zchain user=postgres password=postgres')
 
 last = time.time() - 600

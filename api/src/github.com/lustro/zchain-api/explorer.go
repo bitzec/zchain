@@ -68,7 +68,7 @@ func main() {
 
   if (Command == "sync") { sync(db) }
 
-  ZcashRPCHost = "http://172.17.0.1:8232"
+  ZcashRPCHost = "http://172.17.0.1:8732"
 
   rdc := redis.NewClient(&redis.Options{Addr: RedisHost, Password: RedisPass, DB: RedisDB})
 

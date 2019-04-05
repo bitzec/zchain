@@ -20,7 +20,7 @@ const (
 
 var (
 
-  ZcashRPCHost = "http://127.0.0.1:8232"
+  ZcashRPCHost = "http://127.0.0.1:8732"
 
 )
 

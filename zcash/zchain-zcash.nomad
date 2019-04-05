@@ -37,7 +37,7 @@ job "zchain-zcash" {
             static = 8732
           }
           port "peer" {
-            static = 8233
+            static = 8733
           }
           port "node" {
             static = 18733
