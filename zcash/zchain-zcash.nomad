@@ -8,7 +8,7 @@ job "zchain-zcash" {
     stagger      = "30s"
     max_parallel = 2
   }
- 
+
   group "zchain-zcash-production" {
     count = 1
 
@@ -17,13 +17,13 @@ job "zchain-zcash" {
       interval = "5m"
       delay = "25s"
       mode = "delay"
-    }   
+    }
 
     task "zchain-zcash" {
       driver = "docker"
       config {
         image = "lustro/zchain-zcash"
-        volumes = ["/root/.zcash:/root/.zcash", "/run/postgresql:/run/postgresql"]
+        volumes = ["/root/.bitzec:/root/.bitzec", "/run/postgresql:/run/postgresql"]
         ssl = true
         network_mode = "host"
       }
@@ -34,16 +34,16 @@ job "zchain-zcash" {
         network {
           mbits = 5
           port "rpc" {
-            static = 8232
+            static = 8732
           }
           port "peer" {
             static = 8233
           }
           port "node" {
-            static = 18233
+            static = 18733
           }
         }
       }
     }
   }
-} 
+}
